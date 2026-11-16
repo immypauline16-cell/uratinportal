@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>URA TIN Registration Portal</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="portal.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER SECTION -->
+    <header>
+
+        <img src="ura-logo.png" alt="Uganda Revenue Authority Logo">
+
+        <h1>TIN Registration Portal</h1>
+
+    </header>
+
+    <!-- INFORMATION BAR -->
+    <section class="info-bar">
+
+        <p>Have your National ID ready before starting.</p>
+
+    </section>
+
+    <!-- MAIN FORM AREA -->
+    <main class="form-container">
+
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <!-- TAXPAYER TYPE SELECTION -->
+            <div class="taxpayer-options">
+
+                <input type="radio"
+                       id="individual"
+                       name="taxpayerType"
+                       value="Individual Taxpayer"
+                       checked>
+
+                <label for="individual">
+                    Individual Taxpayer
+                </label>
+
+                <input type="radio"
+                       id="business"
+                       name="taxpayerType"
+                       value="Business Entity">
+
+                <label for="business">
+                    Business Entity
+                </label>
+
+            </div>
+
+            <!-- SECTION A -->
+            <fieldset>
+
+                <legend>Section A: Individual Taxpayer Details</legend>
+
+                <!-- FULL NAME -->
+                <div class="form-group">
+
+                    <label for="fullname">Full Name:</label>
+
+                    <input type="text"
+                           id="fullname"
+                           name="fullname"
+                           placeholder="Enter your full name"
+                           required>
+
+                </div>
+
+                <!-- NIN -->
+                <div class="form-group">
+
+                    <label for="nin">National Identification Number (NIN):</label>
+
+                    <input type="text"
+                           id="nin"
+                           name="nin"
+                           placeholder="Enter your 14-character NIN"
+                           pattern="[A-Z]{2}[A-Z0-9]{12}"
+                           minlength="14"
+                           maxlength="14"
+                           title="Enter two capital letters followed by 12 capital letters or digits"
+                           required>
+
+                </div>
+
+                <!-- DATE OF BIRTH -->
+                <div class="form-group">
+
+                    <label for="dob">Date of Birth:</label>
+
+                    <input type="date"
+                           id="dob"
+                           name="dob">
+
+                </div>
+
+                <!-- GENDER -->
+                <div class="form-group">
+
+                    <label>Gender:</label>
+
+                    <div class="gender-options">
+
+                        <label for="male">
+                            <input type="radio"
+                                   id="male"
+                                   name="gender"
+                                   value="Male">
+                            Male
+                        </label>
+
+                        <label for="female">
+                            <input type="radio"
+                                   id="female"
+                                   name="gender"
+                                   value="Female">
+                            Female
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <!-- DISTRICT -->
+                <div class="form-group">
+
+                    <label for="district">District:</label>
+
+                    <select id="district" name="district">
+
+                        <option value="">Select your district</option>
+
+                        <option value="Kampala">Kampala</option>
+
+                        <option value="Wakiso">Wakiso</option>
+
+                        <option value="Mukono">Mukono</option>
+
+                        <option value="Jinja">Jinja</option>
+
+                        <option value="Mbarara">Mbarara</option>
+
+                    </select>
+
+                </div>
+
+                <!-- PHONE -->
+                <div class="form-group">
+
+                    <label for="phone">Phone Number:</label>
+
+                    <input type="tel"
+                           id="phone"
+                           name="phone"
+                           placeholder="Enter your phone number"
+                           required>
+
+                </div>
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label for="email">Email Address:</label>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="Enter your email address">
+
+                </div>
+
+                <!-- NATIONAL ID UPLOAD -->
+                <div class="form-group">
+
+                    <label for="nationalid">Upload National ID:</label>
+
+                    <input type="file"
+                           id="nationalid"
+                           name="nationalid"
+                           accept=".jpg,.pdf">
+
+                </div>
+
+            </fieldset>
+
+            <!-- NEXT BUTTON -->
+            <div class="button-container">
+
+                <button type="button" class="next-btn">
+                    Next
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>&copy; 2026 Uganda Revenue Authority. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
